@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Fitness app</string>
+    <string name="start_button">Start</string>
+    <string name="stop_button">Stop</string>
+    <string name="map_button">Map</string>
+    <string name="history_button">History</string>
+    <string name="alert_dialog_confirm_button">Confirm</string>
+    <string name="alert_dialog_cancel_button">Cancel</string>
+    <string name="alert_dialog_location_permission_text">In order to track your activities, we need your permission to use your location</string>
+    <string name="gps_error_message">GPS is disabled</string>
+    <string name="permission_error_message">Missing location permission</string>
+    <string name="total_distance_text_label_unit_of_measure">Total distance: %.2f km</string>
+    <string name="distance_unit_of_measure">km</string>
+    <string name="duration_text_label_units_of_measure">Duration: %1$02d:%2$02d:%3$02d</string>
+    <string name="average_speed_text_label_unit_of_measure">Average speed: %.2f km/h</string>
+    <string name="speed_unit_of_measure">%.2f km/h</string>
+    <string name="average_speed_per_kilomoters_text_label">Average speed per kilometers:</string>
+    <string name="distance_text_label">Distance: </string>
+    <string name="speed_text_label_unit_of_measuer">Speed: %.2f km/h</string>
+    <string name="tempo_text_unit_of_measure">Tempo: %.2f min/km</string>
+    <string name="tempo_no_data">Tempo: --:--</string>
+    <string name="alert_dialog_gps_title">Enable GPS</string>
+    <string name="alert_dialog_gps_text">In order to track your activity please enable your GPS!</string>
+    <string name="alert_dialog_location_permission_title">Grant Location Permission</string>
+    <string name="disabled_gps_notification_text">Location: GPS is disabled</string>
+    <string name="start_screen_name">Start activity</string>
+    <string name="map_screen_name">Map</string>
+    <string name="summary_screen_name">Summary</string>
+    <string name="start_time">Start time: %1$s</string>
+    <string name="history_screen_name">History</string>
+    <string name="step_value_format">%.1f</string>
+    <string name="x_label">x : %d</string>
+    <string name="y_label">y : %.2f</string>
+    <string name="avg_speed_chart_label">Average speed per kilometer</string>
+    <string name="elevation_chart_label">Elevation per kilometer</string>
+    <string name="start_point_label">Start</string>
+    <string name="stop_point_label">Stop</string>
+    <string name="history_details_screen_name">Fitness Activity Details</string>
+    <string name="start_button_name">Let\'s Start!</string>
+
+</resources>
