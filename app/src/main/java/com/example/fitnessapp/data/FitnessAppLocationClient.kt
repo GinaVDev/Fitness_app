@@ -1,9 +1,12 @@
 package com.example.fitnessapp.data
 
+import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Context
 import android.location.Location
 import android.location.LocationManager
 import android.os.Looper
+import androidx.annotation.RequiresPermission
 import com.example.fitnessapp.R
 import com.example.fitnessapp.data.model.LocationException
 import com.example.fitnessapp.extensions.hasLocationPermission
@@ -38,6 +41,7 @@ class FitnessAppLocationClient @Inject constructor(
         )
     }
 
+    @RequiresPermission(Manifest.permission.ACCESS_FINE_LOCATION)
     override suspend fun getCurrentLocation(): Location? {
         return suspendCancellableCoroutine { continuation ->
             locationProviderClient.lastLocation.addOnCompleteListener { task ->
@@ -50,6 +54,7 @@ class FitnessAppLocationClient @Inject constructor(
         }
     }
 
+    @SuppressLint("MissingPermission")
     private fun getLocationUpdateFlow(): Flow<Location> {
         return callbackFlow {
             checkPermissions()

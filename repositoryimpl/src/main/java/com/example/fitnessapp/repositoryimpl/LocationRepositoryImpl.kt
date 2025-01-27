@@ -1,7 +1,9 @@
 package com.example.fitnessapp.repositoryimpl
 
+import android.Manifest
 import android.location.Location
 import android.util.Log
+import androidx.annotation.RequiresPermission
 import com.example.fitnessapp.localdatasource.FitnessActivity
 import com.example.fitnessapp.localdatasource.FitnessActivityLocalDataSource
 import com.example.fitnessapp.localdatasource.FitnessLocation
@@ -27,7 +29,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flow
@@ -152,6 +153,7 @@ class LocationRepositoryImpl @Inject constructor(
         }
     }
 
+    @RequiresPermission(Manifest.permission.ACCESS_FINE_LOCATION)
     override suspend fun getCurrentLocation(): CurrentLocation? {
         val location = locationClient.getCurrentLocation()
         return location?.let {
@@ -277,7 +279,5 @@ class LocationRepositoryImpl @Inject constructor(
         _activityId.value = activityId
     }
 }
-
-
 
 const val M_PER_SEC_TO_KM_PER_HOUR = 3.6F
